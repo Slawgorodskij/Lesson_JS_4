@@ -1,13 +1,13 @@
 'use strict';
-function Product(name, price) {
-  this.name = name;
-  this.price = price;
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+  make25PercentDiscount = function () {
+    this.price = this.price - this.price * 0.25;
+  };
 }
-
-Product.prototype.make25PercentDiscount = function () {
-  this.price = this.price - this.price * 0.25;
-};
-
 const products = [
   new Product('Телефон', 10999),
   new Product('Телевизор', 15249),
